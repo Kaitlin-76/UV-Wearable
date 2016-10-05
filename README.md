@@ -19,3 +19,22 @@ analogWrite(LED, MiCSreading);
 delay (2000);
 
 }
+///Dr. Riedel's code//
+///Mine
+#define LED 11
+void setup() {
+ Serial.begin(115200);
+ Serial.println("MiCS-5524 demo!");
+pinMode (LED, OUTPUT);
+}
+
+void loop() {
+ int MiCSreading = analogRead(A0);
+Serial.print (MiCSreading);
+ Serial.print(",");
+ 
+
+analogWrite(LED, MiCSreading);
+delay (2000);
+
+}
